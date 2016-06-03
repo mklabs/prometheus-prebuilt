@@ -82,6 +82,9 @@ The version numbers of this module should match the version number of the
 [offical prometheus
 releases](https://github.com/prometheus/prometheus/releases).
 
+A pre-release version may be used to have a lower precedence versionning
+specific to prometheus-prebuilt package.
+
 ---
 
 > Based on https://github.com/electron-userland/electron-prebuilt/
