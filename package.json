@@ -1,0 +1,41 @@
+{
+  "name": "prometheus-prebuilt",
+  "version": "0.19.2",
+  "description": "Install prometheus prebuilt binaries for the command-line use using npm",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mklabs/prometheus-prebuilt.git"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js",
+    "test": "mocha -R spec"
+  },
+  "directories": {
+    "bin": "bin"
+  },
+  "main": "lib",
+  "dependencies": {
+    "gh-got": "^4.0.0",
+    "gunzip-maybe": "^1.3.1",
+    "micro-debug": "^1.0.0",
+    "request": "^2.72.0",
+    "tar-fs": "^1.13.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mklabs/prometheus-prebuilt/issues"
+  },
+  "homepage": "https://github.com/mklabs/prometheus-prebuilt",
+  "config": {
+    "paths": {
+      "windows": "dist/prometheus-0.19.2.windows-386/prometheus.exe",
+      "win32": "dist/prometheus-0.19.2.windows-386/prometheus.exe",
+      "linux": "dist/prometheus-0.19.2.linux-386/prometheus",
+      "darwin": "dist/prometheus-0.19.2.darwin-386/prometheus",
+      "freebsd": "dist/prometheus-0.19.2.linux-386/prometheus"
+    }
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
+}

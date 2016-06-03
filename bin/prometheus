@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var prometheus = require('..');
+
+var argv = process.argv.slice(2);
+var opts = prometheus.argv(argv);
+
+prometheus.run(argv, opts).on('close', function (code) {
+  process.exit(code)
+});
