@@ -17,7 +17,7 @@ maintained independently of any company.
 ## Installation
 
 Download and install the latest build of prometheus for your OS and add it to
-your projects `package.json` as a `devDependency`:
+your projects `package.json`:
 
 ```
 npm install prometheus-prebuilt --save-dev
@@ -32,32 +32,55 @@ You can also use the `-g` flag (global) to symlink it into your PATH:
 npm install -g prometheus-prebuilt
 ```
 
-If that command fails with an `EACCESS` error you may have to run it again with
-`sudo`:
-
-```
-sudo npm install -g prometheus-prebuilt
-```
-
 Now you can just run `prometheus` to run prometheus:
 
 ```
-prometheus
+$ prometheus --help
+usage: prometheus [<args>]
+
+
+   -version false
+      Print version information.
+
+   -config.file "prometheus.yml"
+      Prometheus configuration file name.
+
+   ...
 ```
+
+## Options
+
+## os
 
 If you want to change the OS version that is downloaded (e.g., `windows` on a
 `linux` machine), you can use the `--os` flag with npm install or set the
 `npm_config_os` environment variable:
+
 ```
 npm install --os=windows prometheus-prebuilt
+```
+
+## version
+
+Binaries are downloaded from [github repo
+releases](https://github.com/prometheus/prometheus/releases).
+
+Default version is always the
+[latest](https://api.github.com/repos/prometheus/prometheus/releases/latest)
+one, unless you use `--version` flag with npm install or set the
+`npm_config_version` environment variable:
+
+```
+npm install --version="0.18.0" prometheus-prebuilt
 ```
 
 ## About
 
 Works on OSes that prometheus supports: https://prometheus.io/download/
 
-The version numbers of this module match the version number of the [offical
-prometheus releases](https://github.com/prometheus/prometheus/releases).
+The version numbers of this module should match the version number of the
+[offical prometheus
+releases](https://github.com/prometheus/prometheus/releases).
 
 ---
 
